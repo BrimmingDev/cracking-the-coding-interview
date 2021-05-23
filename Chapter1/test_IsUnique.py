@@ -1,6 +1,4 @@
 import unittest
-import random
-import string
 
 # O(n^2) time, O(1) space
 # def IsUnique(s):
