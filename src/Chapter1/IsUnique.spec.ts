@@ -15,13 +15,13 @@
 function isUnique(s): boolean {
 	if (s.length > 128) return false;
 
-	const chars: { [key: string]: boolean } = {};
+	const chars = new Set();
 
 	for (const char of s) {
-		if (chars[char] == true) {
+		if (chars.has(char)) {
 			return false;
 		} else {
-			chars[char] = true;
+			chars.add(char)
 		}
 	}
 
