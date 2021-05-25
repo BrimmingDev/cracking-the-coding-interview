@@ -1,12 +1,39 @@
-// O(a log a + b log b) time, O(a + b) space
+// O(a log a + b log b) time, O(1) space
+// function isPermutation(a: string[], b: string[]): boolean {
+// 	if (a.length != b.length) return false;
+
+// 	a.sort();
+// 	b.sort();
+
+// 	for (const i in a) {
+// 		if (a[i] != b[i]) return false;
+// 	}
+
+// 	return true;
+// }
+
+// O(a + b) time, O(a + b) space
 function isPermutation(a: string[], b: string[]): boolean {
 	if (a.length != b.length) return false;
 
-	a.sort();
-	b.sort();
+	const chars = new Map();
 
-	for (const i in a) {
-		if (a[i] != b[i]) return false;
+	for (const char of a) {
+		if (chars[char] == null) {
+			chars[char] = 1;
+		} else {
+			chars[char]++;
+		}
+	}
+
+	for (const char of b) {
+		if (chars[char] == null) {
+			chars[char] = 0;
+		}
+
+		chars[char]--;
+
+		if (chars[char] < 0) return false;
 	}
 
 	return true;
