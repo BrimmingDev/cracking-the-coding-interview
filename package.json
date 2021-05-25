@@ -1,0 +1,29 @@
+{
+  "name": "cracking-the-coding-interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrimmingDev/cracking-the-coding-interview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrimmingDev/cracking-the-coding-interview/issues"
+  },
+  "homepage": "https://github.com/BrimmingDev/cracking-the-coding-interview#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-typescript": "^7.13.0",
+    "babel-jest": "^26.6.3"
+  }
+}
